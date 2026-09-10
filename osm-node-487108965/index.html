@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style>body{padding-bottom:44px}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megobari - Серце Грузії у Києві</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #E0DBCF; /* Light beige for text */
+            background-color: #2F2F2F; /* Dark background */
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #D4AF37; /* Gold accent for headings */
+        }
+        .bg-hero-gradient {
+            background: linear-gradient(135deg, #4A0E0E 0%, #7C1D1D 100%); /* Deep red gradient */
+        }
+        .btn-primary {
+            background-color: #D4AF37; /* Gold */
+            color: #2F2F2F; /* Dark text on gold */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #E0BC50; /* Lighter gold on hover */
+            transform: translateY(-2px);
+        }
+        .text-gold {
+            color: #D4AF37;
+        }
+        .border-gold {
+            border-color: #D4AF37;
+        }
+        .card {
+            background-color: #3A3A3A; /* Slightly lighter dark for cards */
+            border-left: 4px solid #D4AF37;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .sticky-header {
+            background-color: rgba(47, 47, 47, 0.95); /* Semi-transparent dark for sticky header */
+            backdrop-filter: blur(5px);
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #D4AF37;
+        }
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+<div id="demo-concept-banner" style="position:fixed;left:0;right:0;bottom:0;z-index:2147483647;background:rgba(17,24,39,.94);color:#fff;font:13px/1.4 system-ui,sans-serif;text-align:center;padding:10px 12px">Демо-концепт сайту для «Megobari». Не є офіційним сайтом закладу. · Demo concept, not the official website.</div>
+
+    <!-- Sticky Header -->
+    <header class="sticky-header fixed top-0 left-0 right-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-3xl font-bold text-gold tracking-wider" data-lang-key="nav_logo">Megobari</a>
+            <div class="flex items-center space-x-8">
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#about" class="text-lg nav-link" data-lang-key="nav_about">Про нас</a></li>
+                    <li><a href="#menu" class="text-lg nav-link" data-lang-key="nav_menu">Меню</a></li>
+                    <li><a href="#contacts" class="text-lg nav-link" data-lang-key="nav_contacts">Контакти</a></li>
+                </ul>
+                <button id="language-switcher" class="px-4 py-2 rounded-full border border-gold text-gold text-sm font-medium hover:bg-gold hover:text-2F2F2F transition-colors duration-300">
+                    <span data-lang-key="nav_lang">Укр / Eng</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-hero-gradient min-h-screen flex items-center justify-center text-center p-4 pt-24">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-6xl md:text-8xl font-extrabold mb-6 drop-shadow-lg" data-lang-key="hero_h1">Megobari: Серце Грузії у Києві</h1>
+                <p class="text-xl md:text-2xl mb-10 leading-relaxed max-w-2xl mx-auto" data-lang-key="hero_p">
+                    Відкрийте для себе справжній смак грузинської гостинності на Русанівській набережній.
+                </p>
+                <a href="tel:+380931000310" class="btn-primary inline-flex items-center justify-center px-10 py-4 text-xl font-semibold rounded-full shadow-lg">
+                    <i class="fas fa-phone-alt mr-3"></i> <span data-lang-key="hero_button">Забронювати стіл</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container mx-auto px-4 py-20 md:py-32">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl font-bold mb-10" data-lang-key="about_h2">Про нас</h2>
+                <div class="text-lg leading-relaxed space-y-6">
+                    <p data-lang-key="about_p1">
+                        "Megobari" в перекладі з грузинської означає "друг". І саме ця філософія лежить в основі нашого закладу.
+                        Ми створили місце, де кожен гість відчуває себе бажаним другом, оточеним теплом та справжнім грузинським колоритом.
+                    </p>
+                    <p data-lang-key="about_p2">
+                        Наша кухня — це свято грузинських традицій, де кожен інгредієнт відбирається з особливою увагою.
+                        Справжні грузинські спеції, свіже м'ясо та овочі, що зігріті сонцем — це основа наших хачапурі, хінкалі,
+                        шашликів та багатьох інших страв, що готуються за старовинними рецептами, переданими з покоління в покоління.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="container mx-auto px-4 py-20 md:py-32">
+            <h2 class="text-5xl font-bold text-center mb-16" data-lang-key="menu_h2">Меню</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Menu Item 1 -->
+                <div class="card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-3xl font-semibold mb-3 text-gold" data-lang-key="menu_item1_name">Хінкалі з яловичиною</h3>
+                    <p class="text-base text-gray-300 mb-4" data-lang-key="menu_item1_desc">Соковиті грузинські пельмені з ароматним м'ясним бульйоном.</p>
+                    <span class="text-2xl font-bold text-gold">120 грн / 4 шт.</span>
+                </div>
+                <!-- Menu Item 2 -->
+                <div class="card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-3xl font-semibold mb-3 text-gold" data-lang-key="menu_item2_name">Хачапурі по-аджарськи</h3>
+                    <p class="text-base text-gray-300 mb-4" data-lang-key="menu_item2_desc">Човник з тіста, запечений з сиром сулугуні, жовтком та маслом.</p>
+                    <span class="text-2xl font-bold text-gold">280 грн</span>
+                </div>
+                <!-- Menu Item 3 -->
+                <div class="card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-3xl font-semibold mb-3 text-gold" data-lang-key="menu_item3_name">Шашлик зі свинини</h3>
+                    <p class="text-base text-gray-300 mb-4" data-lang-key="menu_item3_desc">Соковиті шматочки свинини, мариновані у спеціях та запечені на мангалі.</p>
+                    <span class="text-2xl font-bold text-gold">350 грн / 300 г</span>
+                </div>
+                <!-- Menu Item 4 -->
+                <div class="card p-6 rounded-lg shadow-xl">
+                    <h3 class="text-3xl font-semibold mb-3 text-gold" data-lang-key="menu_item4_name">Пхалі Асорті</h3>
+                    <p class="text-base text-gray-300 mb-4" data-lang-key="menu_item4_desc">Традиційні грузинські паштети зі шпинату, буряка та квасолі з горіхами.</p>
+                    <span class="text-2xl font-bold text-gold">220 грн</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Section -->
+        <section id="contacts" class="container mx-auto px-4 py-20 md:py-32">
+            <h2 class="text-5xl font-bold text-center mb-16" data-lang-key="contacts_h2">Контакти</h2>
+            <div class="max-w-2xl mx-auto bg-3A3A3A p-8 rounded-lg shadow-xl border border-gold text-center">
+                <div class="space-y-6 text-xl">
+                    <p class="flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-gold mr-3"></i>
+                        <span data-lang-key="contacts_address">Адреса: Русанівська набережна</span>
+                    </p>
+                    <p class="flex items-center justify-center">
+                        <i class="fas fa-phone-alt text-gold mr-3"></i>
+                        <span data-lang-key="contacts_phone">Телефон:</span> <a href="tel:+380931000310" class="ml-2 text-gold hover:underline">+38 (093) 100-03-10</a>
+                    </p>
+                    <div class="flex items-center justify-center pt-4">
+                        <a href="https://www.instagram.com/megobari_kyiv" target="_blank" rel="noopener" class="text-gold text-4xl hover:text-E0BC50 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-4A0E0E to-7C1D1D text-center py-10 mt-20">
+        <p class="text-sm text-gray-300" data-lang-key="footer_text">&copy; 2023 Megobari. Усі права захищені.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            uk: {
+                nav_logo: "Megobari",
+                nav_about: "Про нас",
+                nav_menu: "Меню",
+                nav_contacts: "Контакти",
+                nav_lang: "Укр / Eng",
+                hero_h1: "Megobari: Серце Грузії у Києві",
+                hero_p: "Відкрийте для себе справжній смак грузинської гостинності на Русанівській набережній.",
+                hero_button: "Забронювати стіл",
+                about_h2: "Про нас",
+                about_p1: `"Megobari" в перекладі з грузинської означає "друг". І саме ця філософія лежить в основі нашого закладу. Ми створили місце, де кожен гість відчуває себе бажаним другом, оточеним теплом та справжнім грузинським колоритом.`,
+                about_p2: `Наша кухня — це свято грузинських традицій, де кожен інгредієнт відбирається з особливою увагою. Справжні грузинські спеції, свіже м'ясо та овочі, що зігріті сонцем — це основа наших хачапурі, хінкалі, шашликів та багатьох інших страв, що готуються за старовинними рецептами, переданими з покоління в покоління.`,
+                menu_h2: "Меню",
+                menu_item1_name: "Хінкалі з яловичиною",
+                menu_item1_desc: "Соковиті грузинські пельмені з ароматним м'ясним бульйоном.",
+                menu_item2_name: "Хачапурі по-аджарськи",
+                menu_item2_desc: "Човник з тіста, запечений з сиром сулугуні, жовтком та маслом.",
+                menu_item3_name: "Шашлик зі свинини",
+                menu_item3_desc: "Соковиті шматочки свинини, мариновані у спеціях та запечені на мангалі.",
+                menu_item4_name: "Пхалі Асорті",
+                menu_item4_desc: "Традиційні грузинські паштети зі шпинату, буряка та квасолі з горіхами.",
+                contacts_h2: "Контакти",
+                contacts_address: "Адреса: Русанівська набережна",
+                contacts_phone: "Телефон:",
+                footer_text: "&copy; 2023 Megobari. Усі права захищені."
+            },
+            en: {
+                nav_logo: "Megobari",
+                nav_about: "About Us",
+                nav_menu: "Menu",
+                nav_contacts: "Contacts",
+                nav_lang: "Ukr / Eng",
+                hero_h1: "Megobari: The Heart of Georgia in Kyiv",
+                hero_p: "Discover the true taste of Georgian hospitality on Rusanivska Embankment.",
+                hero_button: "Book a Table",
+                about_h2: "About Us",
+                about_p1: `"Megobari" means "friend" in Georgian. This philosophy is at the core of our establishment. We have created a place where every guest feels like a cherished friend, surrounded by warmth and authentic Georgian charm.`,
+                about_p2: `Our cuisine is a celebration of Georgian traditions, where every ingredient is selected with special care. Authentic Georgian spices, fresh meat and sun-kissed vegetables are the foundation of our khachapuri, khinkali, shashliks, and many other dishes prepared according to ancient recipes passed down through generations.`,
+                menu_h2: "Menu",
+                menu_item1_name: "Khinkali with Beef",
+                menu_item1_desc: "Juicy Georgian dumplings with aromatic meat broth.",
+                menu_item2_name: "Adjaruli Khachapuri",
+                menu_item2_desc: "Boat-shaped bread baked with Suluguni cheese, egg yolk, and butter.",
+                menu_item3_name: "Pork Shashlik",
+                menu_item3_desc: "Succulent pieces of pork, marinated in spices and grilled over charcoal.",
+                menu_item4_name: "Assorted Pkhali",
+                menu_item4_desc: "Traditional Georgian vegetable pates made from spinach, beetroot, and beans with walnuts.",
+                contacts_h2: "Contacts",
+                contacts_address: "Address: Rusanivska Embankment",
+                contacts_phone: "Phone:",
+                footer_text: "&copy; 2023 Megobari. All rights reserved."
+            }
+        };
+
+        let currentLang = 'uk';
+
+        function updateTexts() {
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    element.innerHTML = translations[currentLang][key];
+                }
+            });
+            // Update the document language attribute
+            document.documentElement.lang = currentLang;
+            // Update title
+            document.title = translations[currentLang].hero_h1;
+        }
+
+        document.getElementById('language-switcher').addEventListener('click', () => {
+            currentLang = currentLang === 'uk' ? 'en' : 'uk';
+            updateTexts();
+        });
+
+        // Initial text update on page load
+        document.addEventListener('DOMContentLoaded', updateTexts);
+    </script>
+</body>
+</html>
