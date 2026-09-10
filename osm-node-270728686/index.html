@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bomaki — демо сайту">
+<meta property="og:description" content="Демо-концепт сайту для «Bomaki»: меню, контакти та онлайн-замовлення.">
+<meta property="og:url" content="https://ivanskachkov.github.io/websites-for-bot/osm-node-270728686/">
+<meta property="og:locale" content="uk_UA">
+<meta name="robots" content="noindex, nofollow">
+<style>body{padding-bottom:44px}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomaki | Japanese-Brazilian Fusion | Milano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            card: '#131A2B',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            coral: '#FF6B6B'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans selection:bg-brand-gold selection:text-brand-dark">
+<div id="demo-concept-banner" style="position:fixed;left:0;right:0;bottom:0;z-index:2147483647;background:rgba(17,24,39,.94);color:#fff;font:13px/1.4 system-ui,sans-serif;text-align:center;padding:10px 12px">Демо-концепт сайту для «Bomaki». Не є офіційним сайтом закладу. · Demo concept, not the official website.</div>
+
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="font-serif text-3xl font-bold tracking-wider text-brand-gold">
+                BOMAKI
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#about" data-i18n="nav-about" class="hover:text-brand-gold transition-colors">Про нас</a>
+                <a href="#menu" data-i18n="nav-menu" class="hover:text-brand-gold transition-colors">Меню</a>
+                <a href="#contacts" data-i18n="nav-contacts" class="hover:text-brand-gold transition-colors">Контакти</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button id="langToggle" class="px-3 py-1.5 rounded-full border border-brand-gold/40 text-xs font-semibold tracking-wider text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
+                    EN
+                </button>
+                <a href="tel:+390239663308" class="hidden sm:inline-flex items-center gap-2 bg-brand-gold text-brand-dark px-5 py-2.5 rounded-full font-semibold text-xs tracking-wider uppercase hover:bg-brand-goldLight transition-all duration-300 shadow-lg shadow-brand-gold/20">
+                    <i class="fa-solid fa-phone"></i>
+                    <span data-i18n="nav-book">Бронювати</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-b from-brand-dark via-[#101624] to-brand-dark">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:32px_32px]"></div>
+        <div class="absolute w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl -top-20 -left-20 pointer-events-none"></div>
+        <div class="absolute w-96 h-96 bg-brand-coral/10 rounded-full blur-3xl -bottom-20 -right-20 pointer-events-none"></div>
+
+        <div class="relative max-w-5xl mx-auto px-6 text-center z-10 py-20">
+            <span class="inline-block uppercase tracking-[0.3em] text-xs font-semibold text-brand-gold mb-4 border border-brand-gold/30 px-4 py-1.5 rounded-full bg-brand-gold/5" data-i18n="hero-badge">
+                Японсько-Бразильська Ф'южн Кухня • Мілан
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1]">
+                Мистецтво <span class="italic text-brand-gold">Nipo-Brasileira</span> смаку
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 font-light mb-12 leading-relaxed" data-i18n="hero-desc">
+                Унікальне поєднання витончених японських традицій та яскравої бразильської пристрасті у самому серці Мілана.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tel:+390239663308" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-brand-gold text-brand-dark px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-brand-goldLight transition-all duration-300 shadow-xl shadow-brand-gold/20">
+                    <i class="fa-solid fa-phone"></i>
+                    <span data-i18n="hero-cta">Забронювати столик</span>
+                </a>
+                <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 border border-white/20 px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase hover:border-brand-gold hover:text-brand-gold transition-all duration-300" data-i18n="hero-menu">
+                    Переглянути меню
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-28 px-6 bg-brand-card/50 relative border-t border-b border-white/5">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-brand-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3" data-i18n="about-subtitle">Наша концепція</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Гармонія двох культур у кожній страві
+                </h2>
+                <p class="text-gray-300 font-light leading-relaxed mb-6" data-i18n="about-text-1">
+                    Bomaki переосмислює гастрономічний досвід, поєднуючи технічну досконалість японських суші-майстрів з яскравими, екзотичними кольорами та смаками бразильської кухні.
+                </p>
+                <p class="text-gray-300 font-light leading-relaxed mb-8" data-i18n="about-text-2">
+                    Розташовані в атмосферному районі Мілана, ми створюємо простір, де витонченість зустрічається з енергією, пропонуючи гостям незабутню кулінарну подорож.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-white/10">
+                    <div>
+                        <span class="block font-serif text-3xl font-bold text-brand-gold mb-1">100%</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider" data-i18n="about-stat-1">Свіжі інгредієнти</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif text-3xl font-bold text-brand-gold mb-1">Milano</span>
+                        <span class="text-xs text-gray-400 uppercase tracking-wider" data-i18n="about-stat-2">Largo La Foppa</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-gradient-to-tr from-brand-dark to-brand-card flex items-center justify-center relative group">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-gold/20 via-transparent to-transparent opacity-60"></div>
+                    <i class="fa-solid fa-utensils text-7xl text-brand-gold/40 group-hover:scale-110 transition-transform duration-500"></i>
+                    <div class="absolute bottom-6 left-6 right-6 p-6 bg-brand-dark/80 backdrop-blur-md rounded-xl border border-white/10">
+                        <p class="font-serif italic text-brand-gold text-lg text-center" data-i18n="about-quote">"Де традиції Токіо зустрічаються з пульсом Ріо."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-28 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-brand-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3" data-i18n="menu-subtitle">Гастрономічна колекція</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6" data-i18n="menu-title">Фірмове Меню</h2>
+                <p class="text-gray-400 font-light" data-i18n="menu-desc">Вибрані позиції нашої унікальної японсько-бразильської ф'южн кухні.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div data-dish="Рол Тропікал Бразилія" data-price="18" data-currency="€" class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-xl font-bold group-hover:text-brand-gold transition-colors" data-i18n="dish-1-title">Рол Тропікал Бразилія</h3>
+                            <span class="font-serif text-xl font-bold text-brand-gold">18 €</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6" data-i18n="dish-1-desc">Лосось, манго, авокадо, крем-чиз, тропічний соус марракуйя та нотки лайма.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-gold font-medium uppercase tracking-wider">
+                        <span data-i18n="menu-tag-1">Авторський рол</span>
+                        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div data-dish="Севіче Ніпо-Бразилейро" data-price="22" data-currency="€" class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-xl font-bold group-hover:text-brand-gold transition-colors" data-i18n="dish-2-title">Севіче Ніпо-Бразилейро</h3>
+                            <span class="font-serif text-xl font-bold text-brand-gold">22 €</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6" data-i18n="dish-2-desc">Свіжий сібас, тигрові креветки, соус понзу з кінзою, перцем чилі та солодкою картоплею.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-gold font-medium uppercase tracking-wider">
+                        <span data-i18n="menu-tag-2">Холодна закуска</span>
+                        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div data-dish="Тартар з тунця Амазонія" data-price="20" data-currency="€" class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-xl font-bold group-hover:text-brand-gold transition-colors" data-i18n="dish-3-title">Тартар з тунця Амазонія</h3>
+                            <span class="font-serif text-xl font-bold text-brand-gold">20 €</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6" data-i18n="dish-3-desc">Рубаний червоний тунець, авокадо, кунжутна олія, соєвий соус та чіпси з манго.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-gold font-medium uppercase tracking-wider">
+                        <span data-i18n="menu-tag-3">Преміум вибір</span>
+                        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div data-dish="Урамакі Сатоші" data-price="19" data-currency="€" class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-xl font-bold group-hover:text-brand-gold transition-colors" data-i18n="dish-4-title">Урамакі Сатоші</h3>
+                            <span class="font-serif text-xl font-bold text-brand-gold">19 €</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6" data-i18n="dish-4-desc">Смажений угор, креветки в темпурі, соус теріякі та гострий майонез.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-gold font-medium uppercase tracking-wider">
+                        <span data-i18n="menu-tag-4">Гарячий хіт</span>
+                        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div data-dish="Бразильські Гіодза" data-price="16" data-currency="€" class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-xl font-bold group-hover:text-brand-gold transition-colors" data-i18n="dish-5-title">Бразильські Гіодза</h3>
+                            <span class="font-serif text-xl font-bold text-brand-gold">16 €</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6" data-i18n="dish-5-desc">Пельмені ручної роботи з начинкою з яловичини піканья та спеціями, подаються з гострим соусом.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-gold font-medium uppercase tracking-wider">
+                        <span data-i18n="menu-tag-5">Гаряча закуска</span>
+                        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div data-dish="Десерт Екзотік Матча" data-price="12" data-currency="€" class="bg-brand-card rounded-2xl p-8 border border-white/5 hover:border-brand-gold/40 transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-xl font-bold group-hover:text-brand-gold transition-colors" data-i18n="dish-6-title">Десерт Екзотік Матча</h3>
+                            <span class="font-serif text-xl font-bold text-brand-gold">12 €</span>
+                        </div>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6" data-i18n="dish-6-desc">Мусс з японської матчі з серцевиною з бразильської маракуї та хрустким бісквітом.</p>
+                    </div>
+                    <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-brand-gold font-medium uppercase tracking-wider">
+                        <span data-i18n="menu-tag-6">Десерт</span>
+                        <i class="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-28 px-6 bg-brand-card/30 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-brand-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3" data-i18n="contacts-subtitle">Зв'яжіться з нами</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6" data-i18n="contacts-title">Контакти та Локація</h2>
+                <p class="text-gray-400 font-light" data-i18n="contacts-desc">Завітайте до нас у Мілані або забронюйте столик за телефоном.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Address -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-6 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold mb-2" data-i18n="contacts-addr-title">Адреса</h3>
+                    <p class="text-gray-400 font-light text-sm">Largo La Foppa, 1<br>Milano, Italia</p>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-6 text-xl">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold mb-2" data-i18n="contacts-phone-title">Телефон</h3>
+                    <a href="tel:+390239663308" class="text-gray-400 font-light text-sm hover:text-brand-gold transition-colors">+39 02 39663308</a>
+                </div>
+
+                <!-- Hours -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-white/5 text-center flex flex-col items-center">
+                    <div class="w-14 h-14 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-6 text-xl">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold mb-2" data-i18n="contacts-hours-title">Години роботи</h3>
+                    <p class="text-gray-400 font-light text-sm" data-i18n="contacts-hours-val">Пн-Нд: 12:30–14:30, 19:30–23:30</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10 text-center text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <a href="#hero" class="font-serif text-xl font-bold tracking-wider text-brand-gold">
+                BOMAKI
+            </a>
+            <p>© <span id="currentYear">2026</span> Bomaki Milano. <span data-i18n="footer-rights">Всі права захищені.</span></p>
+            <div class="flex space-x-6">
+                <a href="#about" class="hover:text-brand-gold transition-colors" data-i18n="nav-about">Про нас</a>
+                <a href="#menu" class="hover:text-brand-gold transition-colors" data-i18n="nav-menu">Меню</a>
+                <a href="#contacts" class="hover:text-brand-gold transition-colors" data-i18n="nav-contacts">Контакти</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Динамічне додавання кнопок замовлення до кожної картки страви
+        document.querySelectorAll('#menu .grid > div').forEach(card => {
+            const btn = document.createElement('button');
+            btn.className = 'mt-6 w-full py-3 rounded-xl bg-brand-gold/10 hover:bg-brand-gold text-brand-gold hover:text-brand-dark font-semibold text-xs tracking-wider uppercase transition-all duration-300 border border-brand-gold/20 flex items-center justify-center gap-2';
+            btn.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> <span data-i18n="order-btn">Замовити страву</span>';
+            
+            btn.addEventListener('click', () => {
+                const dishName = card.getAttribute('data-dish');
+                const dishPrice = card.getAttribute('data-price');
+                const currency = card.getAttribute('data-currency');
+                const currentLang = document.documentElement.lang;
+                
+                const msg = currentLang === 'en' 
+                    ? `Order confirmation:\nDish: ${dishName}\nPrice: ${dishPrice} ${currency}\n\nCall +39 02 39663308 to finalize your order.`
+                    : `Підтвердження замовлення:\nСтрава: ${dishName}\nЦіна: ${dishPrice} ${currency}\n\nЗателефонуйте за номером +39 02 39663308 для оформлення.`;
+                
+                alert(msg);
+            });
+            
+            card.appendChild(btn);
+        });
+
+        // Локалізація (Укр / Англ)
+        const translations = {
+            uk: {
+                'nav-about': 'Про нас',
+                'nav-menu': 'Меню',
+                'nav-contacts': 'Контакти',
+                'nav-book': 'Бронювати',
+                'hero-badge': 'Японсько-Бразильська Ф\'южн Кухня • Мілан',
+                'hero-desc': 'Унікальне поєднання витончених японських традицій та яскравої бразильської пристрасті у самому серці Мілана.',
+                'hero-cta': 'Забронювати столик',
+                'hero-menu': 'Переглянути меню',
+                'about-subtitle': 'Наша концепція',
+                'about-text-1': 'Bomaki переосмислює гастрономічний досвід, поєднуючи технічну досконалість японських суші-майстрів з яскравими, екзотичними кольорами та смаками бразильської кухні.',
+                'about-text-2': 'Розташовані в атмосферному районі Мілана, ми створюємо простір, де витонченість зустрічається з енергією, пропонуючи гостям незабутню кулінарну подорож.',
+                'about-stat-1': 'Свіжі інгредієнти',
+                'about-stat-2': 'Largo La Foppa',
+                'about-quote': '"Де традиції Токіо зустрічаються з пульсом Ріо."',
+                'menu-subtitle': 'Гастрономічна колекція',
+                'menu-title': 'Фірмове Меню',
+                'menu-desc': 'Вибрані позиції нашої унікальної японсько-бразильської ф\'южн кухні.',
+                'dish-1-title': 'Рол Тропікал Бразилія',
+                'dish-1-desc': 'Лосось, манго, авокадо, крем-чиз, тропічний соус марракуйя та нотки лайма.',
+                'menu-tag-1': 'Авторський рол',
+                'dish-2-title': 'Севіче Ніпо-Бразилейро',
+                'dish-2-desc': 'Свіжий сібас, тигрові креветки, соус понзу з кінзою, перцем чилі та солодкою картоплею.',
+                'menu-tag-2': 'Холодна закуска',
+                'dish-3-title': 'Тартар з тунця Амазонія',
+                'dish-3-desc': 'Рубаний червоний тунець, авокадо, кунжутна олія, соєвий соус та чіпси з манго.',
+                'menu-tag-3': 'Преміум вибір',
+                'dish-4-title': 'Урамакі Сатоші',
+                'dish-4-desc': 'Смажений угор, креветки в темпурі, соус теріякі та гострий майонез.',
+                'menu-tag-4': 'Гарячий хіт',
+                'dish-5-title': 'Бразильські Гіодза',
+                'dish-5-desc': 'Пельмені ручної роботи з начинкою з яловичини піканья та спеціями, подаються з гострим соусом.',
+                'menu-tag-5': 'Гаряча закуска',
+                'dish-6-title': 'Десерт Екзотік Матча',
+                'dish-6-desc': 'Мусс з японської матчі з серцевиною з бразильської маракуї та хрустким бісквітом.',
+                'menu-tag-6': 'Десерт',
+                'contacts-subtitle': 'Зв\'яжіться з нами',
+                'contacts-title': 'Контакти та Локація',
+                'contacts-desc': 'Завітайте до нас у Мілані або забронюйте столик за телефоном.',
+                'contacts-addr-title': 'Адреса',
+                'contacts-phone-title': 'Телефон',
+                'contacts-hours-title': 'Години роботи',
+                'contacts-hours-val': 'Пн-Нд: 12:30–14:30, 19:30–23:30',
+                'footer-rights': 'Всі права захищені.',
+                'order-btn': 'Замовити страву'
+            },
+            en: {
+                'nav-about': 'About',
+                'nav-menu': 'Menu',
+                'nav-contacts': 'Contacts',
+                'nav-book': 'Book a Table',
+                'hero-badge': 'Japanese-Brazilian Fusion Cuisine • Milan',
+                'hero-desc': 'A unique fusion of refined Japanese traditions and vibrant Brazilian passion in the heart of Milan.',
+                'hero-cta': 'Book a Table',
+                'hero-menu': 'View Menu',
+                'about-subtitle': 'Our Concept',
+                'about-text-1': 'Bomaki redefines the gastronomic experience by combining the technical excellence of Japanese sushi masters with the bright, exotic colors and flavors of Brazilian cuisine.',
+                'about-text-2': 'Located in an atmospheric district of Milan, we create a space where refinement meets energy, offering guests an unforgettable culinary journey.',
+                'about-stat-1': 'Fresh Ingredients',
+                'about-stat-2': 'Largo La Foppa',
+                'about-quote': '"Where Tokyo traditions meet the pulse of Rio."',
+                'menu-subtitle': 'Gastronomic Collection',
+                'menu-title': 'Signature Menu',
+                'menu-desc': 'Selected items from our unique Japanese-Brazilian fusion cuisine.',
+                'dish-1-title': 'Tropical Brazil Roll',
+                'dish-1-desc': 'Salmon, mango, avocado, cream cheese, tropical passion fruit sauce and lime hints.',
+                'menu-tag-1': 'Signature Roll',
+                'dish-2-title': 'Ceviche Nipo-Brasileiro',
+                'dish-2-desc': 'Fresh sea bass, tiger prawns, ponzu sauce with cilantro, chili pepper and sweet potato.',
+                'menu-tag-2': 'Cold Starter',
+                'dish-3-title': 'Amazonia Tuna Tartare',
+                'dish-3-desc': 'Chopped red tuna, avocado, sesame oil, soy sauce and mango chips.',
+                'menu-tag-3': 'Premium Choice',
+                'dish-4-title': 'Uramaki Satoshi',
+                'dish-4-desc': 'Grilled eel, tempura prawns, teriyaki sauce and spicy mayonnaise.',
+                'menu-tag-4': 'Hot Hit',
+                'dish-5-title': 'Brazilian Gyoza',
+                'dish-5-desc': 'Handmade dumplings filled with picanha beef and spices, served with a spicy sauce.',
+                'menu-tag-5': 'Hot Starter',
+                'dish-6-title': 'Exotic Matcha Dessert',
+                'dish-6-desc': 'Japanese matcha mousse with a Brazilian passion fruit core and crispy biscuit.',
+                'menu-tag-6': 'Dessert',
+                'contacts-subtitle': 'Get in Touch',
+                'contacts-title': 'Contacts & Location',
+                'contacts-desc': 'Visit us in Milan or book your table by phone.',
+                'contacts-addr-title': 'Address',
+                'contacts-phone-title': 'Phone',
+                'contacts-hours-title': 'Opening Hours',
+                'contacts-hours-val': 'Mo-Su: 12:30–14:30, 19:30–23:30',
+                'footer-rights': 'All rights reserved.',
+                'order-btn': 'Order Dish'
+            }
+        };
+
+        const langToggleBtn = document.getElementById('langToggle');
+        
+        langToggleBtn.addEventListener('click', () => {
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'uk' ? 'en' : 'uk';
+            
+            document.documentElement.lang = newLang;
+            langToggleBtn.textContent = newLang === 'uk' ? 'EN' : 'UA';
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[newLang][key]) {
+                    el.textContent = translations[newLang][key];
+                }
+            });
+        });
+
+        // Автоматичне оновлення року
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+<script id="order-widget">
+(function () {
+  var PHONE = "390239663308";
+  var cards = document.querySelectorAll("[data-dish][data-price]");
+  if (!cards.length) return;
+
+  var table = new URLSearchParams(location.search).get("table");
+  var cart = [];
+  var FONT = "font-family:system-ui,-apple-system,sans-serif;";
+  var BTN = FONT + "margin-top:12px;padding:8px 14px;border:0;border-radius:999px;background:#111827;" +
+            "color:#fff;font-size:14px;font-weight:600;cursor:pointer";
+  var SMALL = FONT + "width:28px;height:28px;border:1px solid #d1d5db;border-radius:8px;background:#fff;" +
+              "color:#111827;font-size:16px;cursor:pointer";
+
+  function el(tag, css, text) {
+    var node = document.createElement(tag);
+    if (css) node.style.cssText = css;
+    if (text !== undefined) node.textContent = text;
+    if (tag === "button") node.type = "button";
+    return node;
+  }
+  function fmt(n) { return String(Math.round(n * 100) / 100); }
+  function count() { return cart.reduce(function (s, it) { return s + it.qty; }, 0); }
+  function total() { return cart.reduce(function (s, it) { return s + it.qty * it.price; }, 0); }
+  function currency() { return cart.length ? cart[0].currency : ""; }
+
+  var fab = el("button", FONT + "position:fixed;right:16px;bottom:60px;z-index:2147483646;display:none;" +
+               "padding:12px 18px;border:0;border-radius:999px;background:#16a34a;color:#fff;font-size:15px;" +
+               "font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.25);cursor:pointer");
+  var panel = el("div", FONT + "position:fixed;right:16px;bottom:116px;z-index:2147483646;display:none;" +
+                 "width:min(360px,calc(100vw - 32px));max-height:60vh;overflow:auto;background:#fff;" +
+                 "color:#111827;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.3);padding:16px;" +
+                 "font-size:14px;line-height:1.4");
+  document.body.appendChild(panel);
+  document.body.appendChild(fab);
+  fab.addEventListener("click", function () {
+    panel.style.display = panel.style.display === "none" ? "block" : "none";
+  });
+
+  function render() {
+    var n = count();
+    fab.style.display = n ? "block" : "none";
+    fab.textContent = "🛒 Замовлення (" + n + ")";
+    if (!n) panel.style.display = "none";
+
+    while (panel.firstChild) panel.removeChild(panel.firstChild);
+    panel.appendChild(el("div", "font-weight:700;font-size:16px;margin-bottom:8px",
+                         table ? "Ваше замовлення · столик " + table : "Ваше замовлення"));
+    cart.forEach(function (it) {
+      var row = el("div", "display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #eee");
+      var minus = el("button", SMALL, "−");
+      minus.addEventListener("click", function () {
+        it.qty--;
+        if (it.qty <= 0) cart.splice(cart.indexOf(it), 1);
+        render();
+      });
+      var plus = el("button", SMALL, "+");
+      plus.addEventListener("click", function () { it.qty++; render(); });
+      row.appendChild(el("div", "flex:1", it.name));
+      row.appendChild(minus);
+      row.appendChild(el("span", "min-width:20px;text-align:center", String(it.qty)));
+      row.appendChild(plus);
+      row.appendChild(el("div", "min-width:72px;text-align:right", fmt(it.qty * it.price) + " " + it.currency));
+      panel.appendChild(row);
+    });
+    panel.appendChild(el("div", "font-weight:700;margin:10px 0", "Разом: " + fmt(total()) + " " + currency()));
+
+    var send = el("button", FONT + "width:100%;padding:12px;border:0;border-radius:12px;background:#16a34a;" +
+                  "color:#fff;font-size:15px;font-weight:600;cursor:pointer", "Надіслати замовлення в WhatsApp");
+    send.addEventListener("click", function () {
+      var lines = ["Замовлення з сайту"];
+      if (table) lines.push("Столик: " + table);
+      lines.push("");
+      cart.forEach(function (it) {
+        lines.push(it.qty + " × " + it.name + " — " + fmt(it.qty * it.price) + " " + it.currency);
+      });
+      lines.push("", "Разом: " + fmt(total()) + " " + currency());
+      window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
+    });
+    panel.appendChild(send);
+  }
+
+  cards.forEach(function (card) {
+    var add = el("button", BTN, "+ Додати до замовлення");
+    add.addEventListener("click", function () {
+      var name = card.getAttribute("data-dish");
+      var item = cart.filter(function (it) { return it.name === name; })[0];
+      if (item) {
+        item.qty++;
+      } else {
+        cart.push({name: name, qty: 1, price: parseFloat(card.getAttribute("data-price")) || 0,
+                   currency: card.getAttribute("data-currency") || "грн"});
+      }
+      render();
+    });
+    card.appendChild(add);
+  });
+})();
+</script>
+
+</body>
+</html>
