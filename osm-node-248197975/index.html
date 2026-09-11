@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Taps — demo strony internetowej">
+<meta property="og:description" content="Koncepcja strony internetowej dla „The Taps”: menu, kontakt i możliwość zamawiania online.">
+<meta property="og:url" content="https://ivanskachkov.github.io/websites-for-bot/osm-node-248197975/">
+<meta property="og:locale" content="pl_PL">
+<meta name="robots" content="noindex, nofollow">
+<style>body{padding-bottom:44px}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="pageTitle">The Taps - Bar Rzemieślniczy w Warszawie</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8PUb4FNk+BG+d9O6gWdYHKkKFYzNfaG9nNf+aPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts (Montserrat for headings, Inter for body - supporting PL characters) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for premium look and Google Fonts */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #E0E0E0; /* Light gray for body text */
+            background-color: #121212; /* Dark background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: #F8F8F8; /* Lighter color for headings */
+        }
+        /* Custom button styling */
+        .btn-primary {
+            @apply inline-block px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold/Orange gradient */
+            color: #121212;
+            border: none;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 8px 25px rgba(255, 165, 0, 0.4);
+        }
+        /* Gradient background for Hero section */
+        .hero-gradient-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/1600x900/?bar,warsaw,beer') center center / cover no-repeat;
+            background-attachment: fixed; /* Parallax effect */
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Premium card styling */
+        .menu-card {
+            @apply bg-gray-800 bg-opacity-70 backdrop-blur-sm rounded-xl p-6 shadow-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1;
+        }
+        .text-gold {
+            color: #FFD700;
+        }
+
+        /* Tailwind configuration for custom colors and extending */
+        /* This is typically in tailwind.config.js, but for a single file, it can be in a script tag */
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#FFD700', /* Gold */
+                            secondary: '#FFA500', /* Orange */
+                            dark: '#121212',
+                            light: '#F8F8F8',
+                            gray_text: '#E0E0E0'
+                        },
+                        fontFamily: {
+                            montserrat: ['Montserrat', 'sans-serif'],
+                            inter: ['Inter', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        </script>
+    </style>
+</head>
+<body class="antialiased">
+<div id="demo-concept-banner" style="position:fixed;left:0;right:0;bottom:0;z-index:2147483647;background:rgba(17,24,39,.94);color:#fff;font:13px/1.4 system-ui,sans-serif;text-align:center;padding:10px 12px">Wersja demonstracyjna strony internetowej dla „The Taps”. To nie jest oficjalna strona tego lokalu. · Demo concept of a website for «The Taps». Not the official website of this venue.</div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-dark bg-opacity-90 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-3xl font-montserrat font-bold text-gold hover:text-primary transition-colors duration-300">The Taps</a>
+            <div class="flex items-center space-x-8">
+                <ul class="flex space-x-8">
+                    <li><a href="#about" class="text-gray_text hover:text-primary transition-colors duration-300 text-lg" data-lang-key="navAbout">O nas</a></li>
+                    <li><a href="#menu" class="text-gray_text hover:text-primary transition-colors duration-300 text-lg" data-lang-key="navMenu">Menu</a></li>
+                    <li><a href="#contacts" class="text-gray_text hover:text-primary transition-colors duration-300 text-lg" data-lang-key="navContacts">Kontakt</a></li>
+                </ul>
+                <div class="flex items-center space-x-2">
+                    <button id="lang-pl" class="text-gray_text hover:text-primary font-semibold transition-colors duration-300 text-lg">PL</button>
+                    <span class="text-gray_text">|</span>
+                    <button id="lang-en" class="text-gray_text hover:text-primary font-semibold transition-colors duration-300 text-lg">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-gradient-bg h-screen flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl">
+                <h1 class="text-6xl md:text-7xl font-montserrat font-extrabold leading-tight mb-6 text-gold drop-shadow-lg" data-lang-key="heroTitle">
+                    The Taps: Smakowite Piwo, Wyborne Jedzenie, Niezapomniane Chwile
+                </h1>
+                <p class="text-xl md:text-2xl font-inter mb-10 text-gray_text leading-relaxed" data-lang-key="heroSubtitle">
+                    Odkryj prawdziwą esencję barowej kultury w sercu Warszawy, z najlepszymi piwami rzemieślniczymi i wyśmienitymi przekąskami.
+                </p>
+                <a href="tel:+48601707407" class="btn-primary" data-lang-key="heroButton">
+                    Zarezerwuj Stolik
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 md:py-32 bg-dark-800 px-4">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-5xl font-montserrat font-bold mb-12 text-gold" data-lang-key="aboutTitle">O nas</h2>
+                <p class="text-xl font-inter leading-relaxed mb-6 text-gray_text" data-lang-key="aboutParagraph1">
+                    The Taps to miejsce, gdzie tradycja spotyka się z nowoczesnością. W samym sercu Warszawy stworzyliśmy przestrzeń, która celebruje pasję do dobrego jedzenia i wyjątkowych napojów. Jesteśmy dumni z naszej starannie wyselekcjonowanej oferty piw rzemieślniczych, pochodzących zarówno z lokalnych, jak i międzynarodowych browarów, które zadowolą nawet najbardziej wymagających smakoszy.
+                </p>
+                <p class="text-xl font-inter leading-relaxed text-gray_text" data-lang-key="aboutParagraph2">
+                    Nasze menu to hołd dla lokalnych smaków z nutą globalnych inspiracji. Od klasycznych polskich przekąsek w nowoczesnym wydaniu, po burgery i dania idealne do dzielenia się. Przyjdź i poczuj niepowtarzalną atmosferę, idealną na spotkania z przyjaciółmi, randki czy wieczorny relaks. The Taps to więcej niż bar – to doświadczenie.
+                </p>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-20 md:py-32 bg-gray-900 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-5xl font-montserrat font-bold text-center mb-16 text-gold" data-lang-key="menuTitle">Nasze Menu</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-card" data-dish="Zapiekanka Klasyczna" data-price="35" data-currency="zł">
+                        <h3 class="text-3xl font-montserrat font-semibold mb-3 text-primary" data-lang-key="dish1Name">Zapiekanka Klasyczna</h3>
+                        <p class="text-md font-inter mb-4 text-gray_text" data-lang-key="dish1Desc">Długa, chrupiąca bagietka z pieczarkami, serem i sosem czosnkowym. Ikona polskiego street foodu!</p>
+                        <p class="text-2xl font-montserrat font-bold text-gold">35 zł</p>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="menu-card" data-dish="Tatar Wołowy" data-price="48" data-currency="zł">
+                        <h3 class="text-3xl font-montserrat font-semibold mb-3 text-primary" data-lang-key="dish2Name">Tatar Wołowy</h3>
+                        <p class="text-md font-inter mb-4 text-gray_text" data-lang-key="dish2Desc">Świeżo siekana polędwica wołowa z piklami, cebulką, kaparami i żółtkiem jaja.</p>
+                        <p class="text-2xl font-montserrat font-bold text-gold">48 zł</p>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="menu-card" data-dish="Burger 'The Taps'" data-price="59" data-currency="zł">
+                        <h3 class="text-3xl font-montserrat font-semibold mb-3 text-primary" data-lang-key="dish3Name">Burger 'The Taps'</h3>
+                        <p class="text-md font-inter mb-4 text-gray_text" data-lang-key="dish3Desc">Soczysta wołowina, bekon, ser cheddar, karmelizowana cebula i sos BBQ w maślanej bułce.</p>
+                        <p class="text-2xl font-montserrat font-bold text-gold">59 zł</p>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="menu-card" data-dish="Deska Serów i Wędlin" data-price="65" data-currency="zł">
+                        <h3 class="text-3xl font-montserrat font-semibold mb-3 text-primary" data-lang-key="dish4Name">Deska Serów i Wędlin</h3>
+                        <p class="text-md font-inter mb-4 text-gray_text" data-lang-key="dish4Desc">Starannie wyselekcjonowane sery i wędliny regionalne, podane z pieczywem i konfiturami.</p>
+                        <p class="text-2xl font-montserrat font-bold text-gold">65 zł</p>
+                    </div>
+
+                    <!-- Menu Item 5 -->
+                    <div class="menu-card" data-dish="Skrzydełka BBQ" data-price="39" data-currency="zł">
+                        <h3 class="text-3xl font-montserrat font-semibold mb-3 text-primary" data-lang-key="dish5Name">Skrzydełka BBQ</h3>
+                        <p class="text-md font-inter mb-4 text-gray_text" data-lang-key="dish5Desc">Chrupiące skrzydełka kurczaka glazurowane w pikantnym sosie BBQ, podane z sosem ranch.</p>
+                        <p class="text-2xl font-montserrat font-bold text-gold">39 zł</p>
+                    </div>
+
+                    <!-- Menu Item 6 -->
+                    <div class="menu-card" data-dish="Selekcja Piw Rzemieślniczych" data-price="29" data-currency="zł">
+                        <h3 class="text-3xl font-montserrat font-semibold mb-3 text-primary" data-lang-key="dish6Name">Selekcja Piw Rzemieślniczych</h3>
+                        <p class="text-md font-inter mb-4 text-gray_text" data-lang-key="dish6Desc">Zestaw trzech małych piw rzemieślniczych do degustacji, dobieranych przez barmana.</p>
+                        <p class="text-2xl font-montserrat font-bold text-gold">29 zł</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Section -->
+        <section id="contacts" class="py-20 md:py-32 bg-dark px-4">
+            <div class="container mx-auto max-w-xl text-center">
+                <h2 class="text-5xl font-montserrat font-bold mb-12 text-gold" data-lang-key="contactTitle">Kontakt</h2>
+
+                <div class="space-y-6 text-xl font-inter text-gray_text">
+                    <p>
+                        <i class="fas fa-map-marker-alt text-primary mr-3"></i>
+                        <span data-lang-key="contactAddressLabel">Adres:</span> Henryka Sienkiewicza, 4, Warszawa
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt text-primary mr-3"></i>
+                        <span data-lang-key="contactPhoneLabel">Telefon:</span> <a href="tel:+48601707407" class="hover:text-primary transition-colors duration-300">+48 601 707 407</a>
+                    </p>
+                    <div class="text-left inline-block">
+                        <p class="mb-2"><i class="fas fa-clock text-primary mr-3"></i> <span data-lang-key="contactHoursTitle">Godziny otwarcia:</span></p>
+                        <ul class="list-none pl-8">
+                            <li><span data-lang-key="hoursMoWeSu">Poniedziałek - Środa, Niedziela:</span> 15:00 - 00:00</li>
+                            <li><span data-lang-key="hoursTh">Czwartek:</span> 15:00 - 01:00</li>
+                            <li><span data-lang-key="hoursFrSa">Piątek, Sobota:</span> 15:00 - 03:00</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <a href="https://www.facebook.com/thetapswarsaw" target="_blank" rel="noopener" class="text-primary hover:text-gold transition-colors duration-300">
+                        <i class="fab fa-facebook-square fa-4x"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-500 text-sm">
+        <p>© 2026 The Taps. <span data-lang-key="footerRights">Wszelkie prawa zastrzeżone.</span></p>
+    </footer>
+
+    <!-- Language Switcher Script -->
+    <script>
+        const translations = {
+            // Page Title
+            pageTitle: {
+                pl: "The Taps - Bar Rzemieślniczy w Warszawie",
+                en: "The Taps - Craft Bar in Warsaw"
+            },
+            // Navigation
+            navAbout: { pl: "O nas", en: "About Us" },
+            navMenu: { pl: "Menu", en: "Menu" },
+            navContacts: { pl: "Kontakt", en: "Contact" },
+            // Hero Section
+            heroTitle: {
+                pl: "The Taps: Smakowite Piwo, Wyborne Jedzenie, Niezapomniane Chwile",
+                en: "The Taps: Delicious Beer, Exquisite Food, Unforgettable Moments"
+            },
+            heroSubtitle: {
+                pl: "Odkryj prawdziwą esencję barowej kultury w sercu Warszawy, z najlepszymi piwami rzemieślniczymi i wyśmienitymi przekąskami.",
+                en: "Discover the true essence of bar culture in the heart of Warsaw, with the finest craft beers and delicious bites."
+            },
+            heroButton: { pl: "Zarezerwuj Stolik", en: "Book a Table" },
+            // About Section
+            aboutTitle: { pl: "O nas", en: "About Us" },
+            aboutParagraph1: {
+                pl: "The Taps to miejsce, gdzie tradycja spotyka się z nowoczesnością. W samym sercu Warszawy stworzyliśmy przestrzeń, która celebruje pasję do dobrego jedzenia i wyjątkowych napojów. Jesteśmy dumni z naszej starannie wyselekcjonowanej oferty piw rzemieślniczych, pochodzących zarówno z lokalnych, jak i międzynarodowych browarów, które zadowolą nawet najbardziej wymagających smakoszy.",
+                en: "The Taps is where tradition meets modernity. In the very heart of Warsaw, we've created a space that celebrates a passion for good food and exceptional drinks. We are proud of our carefully selected offer of craft beers, sourced from both local and international breweries, which will satisfy even the most discerning palates."
+            },
+            aboutParagraph2: {
+                pl: "Nasze menu to hołd dla lokalnych smaków z nutą globalnych inspiracji. Od klasycznych polskich przekąsek w nowoczesnym wydaniu, po burgery i dania idealne do dzielenia się. Przyjdź i poczuj niepowtarzalną atmosferę, idealną na spotkania z przyjaciółmi, randki czy wieczorny relaks. The Taps to więcej niż bar – to doświadczenie.",
+                en: "Our menu is a tribute to local flavors with a hint of global inspirations. From classic Polish snacks with a modern twist, to burgers and dishes perfect for sharing. Come and experience the unique atmosphere, ideal for meeting friends, dates, or evening relaxation. The Taps is more than a bar – it's an experience."
+            },
+            // Menu Section
+            menuTitle: { pl: "Nasze Menu", en: "Our Menu" },
+            dish1Name: { pl: "Zapiekanka Klasyczna", en: "Classic Zapiekanka" },
+            dish1Desc: { pl: "Długa, chrupiąca bagietka z pieczarkami, serem i sosem czosnkowym. Ikona polskiego street foodu!", en: "Long, crispy baguette with mushrooms, cheese, and garlic sauce. An icon of Polish street food!" },
+            dish2Name: { pl: "Tatar Wołowy", en: "Beef Tartare" },
+            dish2Desc: { pl: "Świeżo siekana polędwica wołowa z piklami, cebulką, kaparami i żółtkiem jaja.", en: "Freshly chopped beef tenderloin with pickles, onion, capers, and egg yolk." },
+            dish3Name: { pl: "Burger 'The Taps'", en: "The Taps Burger" },
+            dish3Desc: { pl: "Soczysta wołowina, bekon, ser cheddar, karmelizowana cebula i sos BBQ w maślanej bułce.", en: "Juicy beef, bacon, cheddar cheese, caramelized onion, and BBQ sauce in a brioche bun." },
+            dish4Name: { pl: "Deska Serów i Wędlin", en: "Cheese & Cold Cuts Board" },
+            dish4Desc: { pl: "Starannie wyselekcjonowane sery i wędliny regionalne, podane z pieczywem i konfiturami.", en: "Carefully selected regional cheeses and cold cuts, served with bread and preserves." },
+            dish5Name: { pl: "Skrzydełka BBQ", en: "BBQ Wings" },
+            dish5Desc: { pl: "Chrupiące skrzydełka kurczaka glazurowane w pikantnym sosie BBQ, podane z sosem ranch.", en: "Crispy chicken wings glazed in spicy BBQ sauce, served with ranch dressing." },
+            dish6Name: { pl: "Selekcja Piw Rzemieślniczych", en: "Craft Beer Selection" },
+            dish6Desc: { pl: "Zestaw trzech małych piw rzemieślniczych do degustacji, dobieranych przez barmana.", en: "A set of three small craft beers for tasting, selected by the bartender." },
+            // Contacts Section
+            contactTitle: { pl: "Kontakt", en: "Contact" },
+            contactAddressLabel: { pl: "Adres:", en: "Address:" },
+            contactPhoneLabel: { pl: "Telefon:", en: "Phone:" },
+            contactHoursTitle: { pl: "Godziny otwarcia:", en: "Opening Hours:" },
+            hoursMoWeSu: { pl: "Poniedziałek - Środa, Niedziela:", en: "Monday - Wednesday, Sunday:" },
+            hoursTh: { pl: "Czwartek:", en: "Thursday:" },
+            hoursFrSa: { pl: "Piątek, Sobota:", en: "Friday, Saturday:" },
+            // Footer
+            footerRights: { pl: "Wszelkie prawa zastrzeżone.", en: "All rights reserved." }
+        };
+
+        let currentLang = 'pl';
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.setAttribute('lang', lang);
+
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[key] && translations[key][lang]) {
+                    element.textContent = translations[key][lang];
+                }
+            });
+        }
+
+        // Event listeners for language buttons
+        document.getElementById('lang-pl').addEventListener('click', () => updateLanguage('pl'));
+        document.getElementById('lang-en').addEventListener('click', () => updateLanguage('en'));
+
+        // Initialize language on page load
+        updateLanguage(currentLang);
+    </script>
+
+<script id="order-widget">
+(function () {
+  var PHONE = "48601707407";
+  var L = {"add_to_order": "+ Dodaj do zamówienia", "cart": "Zamówienie", "your_order": "Twoje zamówienie", "table": "Stolik", "total": "Suma", "send_whatsapp": "Wyślij zamówienie przez WhatsApp", "order_from_site": "Nowe zamówienie ze strony internetowej"};
+  var cards = document.querySelectorAll("[data-dish][data-price]");
+  if (!cards.length) return;
+
+  var table = new URLSearchParams(location.search).get("table");
+  var cart = [];
+  var FONT = "font-family:system-ui,-apple-system,sans-serif;";
+  var BTN = FONT + "margin-top:12px;padding:8px 14px;border:0;border-radius:999px;background:#111827;" +
+            "color:#fff;font-size:14px;font-weight:600;cursor:pointer";
+  var SMALL = FONT + "width:28px;height:28px;border:1px solid #d1d5db;border-radius:8px;background:#fff;" +
+              "color:#111827;font-size:16px;cursor:pointer";
+
+  function el(tag, css, text) {
+    var node = document.createElement(tag);
+    if (css) node.style.cssText = css;
+    if (text !== undefined) node.textContent = text;
+    if (tag === "button") node.type = "button";
+    return node;
+  }
+  function fmt(n) { return String(Math.round(n * 100) / 100); }
+  function count() { return cart.reduce(function (s, it) { return s + it.qty; }, 0); }
+  function total() { return cart.reduce(function (s, it) { return s + it.qty * it.price; }, 0); }
+  function currency() { return cart.length ? cart[0].currency : ""; }
+
+  var fab = el("button", FONT + "position:fixed;right:16px;bottom:60px;z-index:2147483646;display:none;" +
+               "padding:12px 18px;border:0;border-radius:999px;background:#16a34a;color:#fff;font-size:15px;" +
+               "font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.25);cursor:pointer");
+  var panel = el("div", FONT + "position:fixed;right:16px;bottom:116px;z-index:2147483646;display:none;" +
+                 "width:min(360px,calc(100vw - 32px));max-height:60vh;overflow:auto;background:#fff;" +
+                 "color:#111827;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.3);padding:16px;" +
+                 "font-size:14px;line-height:1.4");
+  document.body.appendChild(panel);
+  document.body.appendChild(fab);
+  fab.addEventListener("click", function () {
+    panel.style.display = panel.style.display === "none" ? "block" : "none";
+  });
+
+  function render() {
+    var n = count();
+    fab.style.display = n ? "block" : "none";
+    fab.textContent = "🛒 " + L.cart + " (" + n + ")";
+    if (!n) panel.style.display = "none";
+
+    while (panel.firstChild) panel.removeChild(panel.firstChild);
+    panel.appendChild(el("div", "font-weight:700;font-size:16px;margin-bottom:8px",
+                         table ? L.your_order + " · " + L.table + " " + table : L.your_order));
+    cart.forEach(function (it) {
+      var row = el("div", "display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #eee");
+      var minus = el("button", SMALL, "−");
+      minus.addEventListener("click", function () {
+        it.qty--;
+        if (it.qty <= 0) cart.splice(cart.indexOf(it), 1);
+        render();
+      });
+      var plus = el("button", SMALL, "+");
+      plus.addEventListener("click", function () { it.qty++; render(); });
+      row.appendChild(el("div", "flex:1", it.name));
+      row.appendChild(minus);
+      row.appendChild(el("span", "min-width:20px;text-align:center", String(it.qty)));
+      row.appendChild(plus);
+      row.appendChild(el("div", "min-width:72px;text-align:right", fmt(it.qty * it.price) + " " + it.currency));
+      panel.appendChild(row);
+    });
+    panel.appendChild(el("div", "font-weight:700;margin:10px 0", L.total + ": " + fmt(total()) + " " + currency()));
+
+    var send = el("button", FONT + "width:100%;padding:12px;border:0;border-radius:12px;background:#16a34a;" +
+                  "color:#fff;font-size:15px;font-weight:600;cursor:pointer", L.send_whatsapp);
+    send.addEventListener("click", function () {
+      var lines = [L.order_from_site];
+      if (table) lines.push(L.table + ": " + table);
+      lines.push("");
+      cart.forEach(function (it) {
+        lines.push(it.qty + " × " + it.name + " — " + fmt(it.qty * it.price) + " " + it.currency);
+      });
+      lines.push("", L.total + ": " + fmt(total()) + " " + currency());
+      window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
+    });
+    panel.appendChild(send);
+  }
+
+  cards.forEach(function (card) {
+    var add = el("button", BTN, L.add_to_order);
+    add.addEventListener("click", function () {
+      var name = card.getAttribute("data-dish");
+      var item = cart.filter(function (it) { return it.name === name; })[0];
+      if (item) {
+        item.qty++;
+      } else {
+        cart.push({name: name, qty: 1, price: parseFloat(card.getAttribute("data-price")) || 0,
+                   currency: card.getAttribute("data-currency") || ""});
+      }
+      render();
+    });
+    card.appendChild(add);
+  });
+})();
+</script>
+
+</body>
+</html>
