@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pizzeria Nowoursynowska — demo strony internetowej">
+<meta property="og:description" content="Koncepcja strony internetowej dla „Pizzeria Nowoursynowska”: menu, kontakt i możliwość zamawiania online.">
+<meta property="og:url" content="https://ivanskachkov.github.io/websites-for-bot/osm-node-280310343/">
+<meta property="og:locale" content="pl_PL">
+<meta name="robots" content="noindex, nofollow">
+<style>body{padding-bottom:44px}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Nowoursynowska | Warszawa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#990000',
+                            darkred: '#7a0000',
+                            cream: '#FDFBF7',
+                            dark: '#1A1A1A',
+                            gold: '#C5A059'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-gold selection:text-white">
+<div id="demo-concept-banner" style="position:fixed;left:0;right:0;bottom:0;z-index:2147483647;background:rgba(17,24,39,.94);color:#fff;font:13px/1.4 system-ui,sans-serif;text-align:center;padding:10px 12px">Wersja demonstracyjna strony internetowej dla „Pizzeria Nowoursynowska”. To nie jest oficjalna strona tego lokalu. · Demo concept of a website for «Pizzeria Nowoursynowska». Not the official website of this venue.</div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-cream/95 backdrop-blur-md border-b border-brand-gold/20 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="font-serif text-2xl font-bold tracking-tight text-brand-dark">
+                Pizzeria <span class="text-brand-red">Nowoursynowska</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm tracking-wider uppercase">
+                <a href="#about" data-i18n="nav_about" class="hover:text-brand-red transition-colors">O nas</a>
+                <a href="#menu" data-i18n="nav_menu" class="hover:text-brand-red transition-colors">Menu</a>
+                <a href="#contacts" data-i18n="nav_contacts" class="hover:text-brand-red transition-colors">Kontakt</a>
+            </nav>
+
+            <div class="flex items-center space-x-6">
+                <button id="langToggle" class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider bg-brand-gold/10 px-3 py-1.5 rounded-full hover:bg-brand-gold/20 transition-colors border border-brand-gold/30">
+                    <i class="fa-solid fa-globe text-brand-gold"></i>
+                    <span id="langText">EN</span>
+                </button>
+                <a href="tel:+48224072828" class="hidden sm:inline-flex items-center justify-center bg-brand-red text-white px-5 py-2.5 rounded-full text-sm font-semibold tracking-wide hover:bg-brand-darkred transition-all shadow-md hover:shadow-lg">
+                    <i class="fa-solid fa-phone mr-2 text-xs"></i> +48 22 407 28 28
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center bg-brand-dark text-white pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent z-0"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center py-20">
+            <span class="inline-block text-brand-gold text-sm uppercase tracking-[0.3em] font-semibold mb-4 bg-brand-gold/10 px-4 py-1.5 rounded-full border border-brand-gold/30" data-i18n="hero_badge">
+                Autentyczna Kuchnia Włoska w Warszawie
+            </span>
+            <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                <span data-i18n="hero_title_1">Prawdziwa Pizza</span> <br><span class="italic text-brand-gold" data-i18n="hero_title_2">prosto z pieca</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light" data-i18n="hero_subtitle">
+                Tradycyjne receptury, świeże składniki sprowadzane z Włoch i pasja, którą czuć w każdym kęsie przy ulicy Nowoursynowskiej.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tel:+48224072828" class="w-full sm:w-auto bg-brand-red text-white px-8 py-4 rounded-full text-base font-semibold tracking-wide hover:bg-brand-darkred transition-all shadow-xl hover:scale-105">
+                    <i class="fa-solid fa-phone mr-2"></i> <span data-i18n="hero_cta_call">Zadzwoń i zamów</span>
+                </a>
+                <a href="#menu" class="w-full sm:w-auto bg-transparent border-2 border-brand-gold/50 text-white px-8 py-4 rounded-full text-base font-semibold tracking-wide hover:bg-brand-gold/10 transition-all">
+                    <span data-i18n="hero_cta_menu">Zobacz Menu</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-brand-red text-sm uppercase tracking-[0.2em] font-bold block mb-3" data-i18n="about_tag">O naszej pizzerii</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-brand-dark mb-6" data-i18n="about_title">
+                    Tradycja i pasja na Ursynowie
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-6 font-light" data-i18n="about_text_1">
+                    Pizzeria Nowoursynowska to miejsce stworzone z miłości do włoskich smaków. Wierzymy, że sekret idealnej pizzerii tkwi w prostocie, najwyższej jakości składnikach oraz cierpliwości w przygotowaniu ciasta, które dojrzewa powoli, by być lekkim i chrupiącym.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed mb-8 font-light" data-i18n="about_text_2">
+                    Nasz piec rozgrzany jest do perfekcji, a każda pizza powstaje na Waszych oczach. Odwiedź nas przy ulicy Nowoursynowskiej 143 i poczuj klimat słonecznej Italii w sercu Warszawy.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-brand-gold/20">
+                    <div>
+                        <span class="block font-serif text-3xl font-bold text-brand-red mb-1">100%</span>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider" data-i18n="about_stat_1">Włoskie składniki</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif text-3xl font-bold text-brand-red mb-1">450°C</span>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider" data-i18n="about_stat_2">W piecu do pizzy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-[4/3] bg-brand-dark/10 rounded-3xl overflow-hidden shadow-2xl relative border-2 border-brand-gold/30 flex items-center justify-center p-8 bg-gradient-to-br from-brand-dark to-brand-darkred text-white text-center">
+                    <div>
+                        <i class="fa-solid fa-pizza-slice text-6xl text-brand-gold mb-4"></i>
+                        <h3 class="font-serif text-2xl font-bold mb-2">Pizzeria Nowoursynowska</h3>
+                        <p class="text-gray-300 text-sm">Warszawa, ul. Nowoursynowska 143</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 bg-white px-4 sm:px-6 lg:px-8 border-y border-brand-gold/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red text-sm uppercase tracking-[0.2em] font-bold block mb-3" data-i18n="menu_tag">Włoskie smaki</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-brand-dark mb-4" data-i18n="menu_title">Nasze Menu</h2>
+                <p class="text-gray-600 font-light text-lg" data-i18n="menu_subtitle">Wybierz swoją ulubioną pizzę przygotowaną według tradycyjnych receptur.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div data-dish="Margherita" data-price="36" data-currency="zł" class="bg-brand-cream rounded-2xl p-6 border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-2xl font-bold text-brand-dark">Margherita</h3>
+                            <span class="text-brand-red font-bold text-xl">36 zł</span>
+                        </div>
+                        <p class="text-gray-600 text-sm font-light mb-6" data-i18n="dish_1_desc">Sos pomidorowy San Marzano, świeża mozzarella fior di latte, świeża bazylia, oliwa extra virgin.</p>
+                    </div>
+                    <div class="text-xs text-brand-gold uppercase tracking-wider font-semibold">Klasyka Włoch</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div data-dish="Prosciutto e Rucola" data-price="45" data-currency="zł" class="bg-brand-cream rounded-2xl p-6 border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-2xl font-bold text-brand-dark">Prosciutto e Rucola</h3>
+                            <span class="text-brand-red font-bold text-xl">45 zł</span>
+                        </div>
+                        <p class="text-gray-600 text-sm font-light mb-6" data-i18n="dish_2_desc">Sos pomidorowy, mozzarella, szynka dojrzewająca Prosciutto di Parma, świeża rukola, płatki parmezanu.</p>
+                    </div>
+                    <div class="text-xs text-brand-gold uppercase tracking-wider font-semibold">Wybór szefa kuchni</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div data-dish="Diavola" data-price="42" data-currency="zł" class="bg-brand-cream rounded-2xl p-6 border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-2xl font-bold text-brand-dark">Diavola</h3>
+                            <span class="text-brand-red font-bold text-xl">42 zł</span>
+                        </div>
+                        <p class="text-gray-600 text-sm font-light mb-6" data-i18n="dish_3_desc">Sos pomidorowy, mozzarella, pikantna włoska wędlina spianata calabra, papryczki jalapeño, czarne oliwki.</p>
+                    </div>
+                    <div class="text-xs text-brand-gold uppercase tracking-wider font-semibold">Pikantna</div>
+                </div>
+
+                <!-- Card 4 -->
+                <div data-dish="Capricciosa" data-price="41" data-currency="zł" class="bg-brand-cream rounded-2xl p-6 border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-2xl font-bold text-brand-dark">Capricciosa</h3>
+                            <span class="text-brand-red font-bold text-xl">41 zł</span>
+                        </div>
+                        <p class="text-gray-600 text-sm font-light mb-6" data-i18n="dish_4_desc">Sos pomidorowy, mozzarella, włoska szynka cotto, świeże pieczarki, czarne oliwki.</p>
+                    </div>
+                    <div class="text-xs text-brand-gold uppercase tracking-wider font-semibold">Tradycyjna</div>
+                </div>
+
+                <!-- Card 5 -->
+                <div data-dish="Quattro Formaggi" data-price="44" data-currency="zł" class="bg-brand-cream rounded-2xl p-6 border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-2xl font-bold text-brand-dark">Quattro Formaggi</h3>
+                            <span class="text-brand-red font-bold text-xl">44 zł</span>
+                        </div>
+                        <p class="text-gray-600 text-sm font-light mb-6" data-i18n="dish_5_desc">Mozzarella, ser gorgonzola, ser taleggio, parmezan, śmietankowa baza (biała pizza).</p>
+                    </div>
+                    <div class="text-xs text-brand-gold uppercase tracking-wider font-semibold">Dla miłośników sera</div>
+                </div>
+
+                <!-- Card 6 -->
+                <div data-dish="Funghi e Tartufo" data-price="47" data-currency="zł" class="bg-brand-cream rounded-2xl p-6 border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-serif text-2xl font-bold text-brand-dark">Funghi e Tartufo</h3>
+                            <span class="text-brand-red font-bold text-xl">47 zł</span>
+                        </div>
+                        <p class="text-gray-600 text-sm font-light mb-6" data-i18n="dish_6_desc">Krem z białych trufli, mozzarella, leśne grzyby, świeża pietruszka, parmezan.</p>
+                    </div>
+                    <div class="text-xs text-brand-gold uppercase tracking-wider font-semibold">Premium</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-brand-red text-sm uppercase tracking-[0.2em] font-bold block mb-3" data-i18n="contacts_tag">Odwiedź nas</span>
+            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-brand-dark mb-4" data-i18n="contacts_title">Kontakt</h2>
+            <p class="text-gray-600 font-light text-lg" data-i18n="contacts_subtitle">Czekamy na Ciebie w Warszawie na Ursynowie.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Address Card -->
+            <div class="bg-white rounded-2xl p-8 border border-brand-gold/20 shadow-sm flex items-start space-x-6">
+                <div class="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center shrink-0 text-brand-red text-xl">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold text-brand-dark mb-2" data-i18n="contacts_address_title">Adres</h3>
+                    <p class="text-gray-600 font-light">Nowoursynowska, 143<br>Warszawa</p>
+                </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="bg-white rounded-2xl p-8 border border-brand-gold/20 shadow-sm flex items-start space-x-6">
+                <div class="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center shrink-0 text-brand-red text-xl">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold text-brand-dark mb-2" data-i18n="contacts_phone_title">Telefon</h3>
+                    <p class="text-gray-600 font-light mb-2">
+                        <a href="tel:+48224072828" class="text-brand-red font-semibold hover:underline">+48 22 407 28 28</a>
+                    </p>
+                    <p class="text-xs text-gray-400" data-i18n="contacts_phone_sub">Zadzwoń, aby złożyć zamówienie</p>
+                </div>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="bg-white rounded-2xl p-8 border border-brand-gold/20 shadow-sm flex items-start space-x-6 md:col-span-2">
+                <div class="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center shrink-0 text-brand-red text-xl">
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl font-bold text-brand-dark mb-2" data-i18n="contacts_hours_title">Godziny otwarcia</h3>
+                    <p class="text-gray-600 font-light" data-i18n="contacts_hours_val">Poniedziałek - Niedziela: 12:00 - 22:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12 border-t border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div>
+                <a href="#hero" class="font-serif text-xl font-bold text-white tracking-tight block mb-1">
+                    Pizzeria <span class="text-brand-red">Nowoursynowska</span>
+                </a>
+                <p class="text-xs text-gray-400">Warszawa, ul. Nowoursynowska 143</p>
+            </div>
+            <p class="text-sm text-gray-400">
+                © 2026 Pizzeria Nowoursynowska. <span data-i18n="footer_rights">Wszelkie prawa zastrzeżone.</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Translations & Interactivity Script -->
+    <script>
+        const translations = {
+            pl: {
+                nav_about: "O nas",
+                nav_menu: "Menu",
+                nav_contacts: "Kontakt",
+                hero_badge: "Autentyczna Kuchnia Włoska w Warszawie",
+                hero_title_1: "Prawdziwa Pizza",
+                hero_title_2: "prosto z pieca",
+                hero_subtitle: "Tradycyjne receptury, świeże składniki sprowadzane z Włoch i pasja, którą czuć w każdym kęsie przy ulicy Nowoursynowskiej.",
+                hero_cta_call: "Zadzwoń i zamów",
+                hero_cta_menu: "Zobacz Menu",
+                about_tag: "O naszej pizzerii",
+                about_title: "Tradycja i pasja na Ursynowie",
+                about_text_1: "Pizzeria Nowoursynowska to miejsce stworzone z miłości do włoskich smaków. Wierzymy, że sekret idealnej pizzerii tkwi w prostocie, najwyższej jakości składnikach oraz cierpliwości w przygotowaniu ciasta, które dojrzewa powoli, by być lekkim i chrupiącym.",
+                about_text_2: "Nasz piec rozgrzany jest do perfekcji, a każda pizza powstaje na Waszych oczach. Odwiedź nas przy ulicy Nowoursynowskiej 143 i poczuj klimat słonecznej Italii w sercu Warszawy.",
+                about_stat_1: "Włoskie składniki",
+                about_stat_2: "W piecu do pizzy",
+                menu_tag: "Włoskie smaki",
+                menu_title: "Nasze Menu",
+                menu_subtitle: "Wybierz swoją ulubioną pizzę przygotowaną według tradycyjnych receptur.",
+                dish_1_desc: "Sos pomidorowy San Marzano, świeża mozzarella fior di latte, świeża bazylia, oliwa extra virgin.",
+                dish_2_desc: "Sos pomidorowy, mozzarella, szynka dojrzewająca Prosciutto di Parma, świeża rukola, płatki parmezanu.",
+                dish_3_desc: "Sos pomidorowy, mozzarella, pikantna włoska wędlina spianata calabra, papryczki jalapeño, czarne oliwki.",
+                dish_4_desc: "Sos pomidorowy, mozzarella, włoska szynka cotto, świeże pieczarki, czarne oliwki.",
+                dish_5_desc: "Mozzarella, ser gorgonzola, ser taleggio, parmezan, śmietankowa baza (biała pizza).",
+                dish_6_desc: "Krem z białych trufli, mozzarella, leśne grzyby, świeża pietruszka, parmezan.",
+                contacts_tag: "Odwiedź nas",
+                contacts_title: "Kontakt",
+                contacts_subtitle: "Czekamy na Ciebie w Warszawie na Ursynowie.",
+                contacts_address_title: "Adres",
+                contacts_phone_title: "Telefon",
+                contacts_phone_sub: "Zadzwoń, aby złożyć zamówienie",
+                contacts_hours_title: "Godziny otwarcia",
+                contacts_hours_val: "Poniedziałek - Niedziela: 12:00 - 22:00",
+                footer_rights: "Wszelkie prawa zastrzeżone."
+            },
+            en: {
+                nav_about: "About",
+                nav_menu: "Menu",
+                nav_contacts: "Contact",
+                hero_badge: "Authentic Italian Cuisine in Warsaw",
+                hero_title_1: "Authentic Pizza",
+                hero_title_2: "straight from the oven",
+                hero_subtitle: "Traditional recipes, fresh ingredients imported from Italy, and passion you can taste in every bite on Nowoursynowska Street.",
+                hero_cta_call: "Call to Order",
+                hero_cta_menu: "View Menu",
+                about_tag: "About our pizzeria",
+                about_title: "Tradition and Passion in Ursynów",
+                about_text_1: "Pizzeria Nowoursynowska is a place created out of love for Italian flavors. We believe the secret to the perfect pizza lies in simplicity, top-quality ingredients, and patience in preparing dough that rises slowly to be light and crispy.",
+                about_text_2: "Our oven is heated to perfection, and every pizza is crafted right before your eyes. Visit us at Nowoursynowska 143 and experience the vibe of sunny Italy in the heart of Warsaw.",
+                about_stat_1: "Italian Ingredients",
+                about_stat_2: "In the Pizza Oven",
+                menu_tag: "Italian flavors",
+                menu_title: "Our Menu",
+                menu_subtitle: "Choose your favorite pizza prepared according to traditional recipes.",
+                dish_1_desc: "San Marzano tomato sauce, fresh fior di latte mozzarella, fresh basil, extra virgin olive oil.",
+                dish_2_desc: "Tomato sauce, mozzarella, Prosciutto di Parma dry-cured ham, fresh arugula, parmesan shavings.",
+                dish_3_desc: "Tomato sauce, mozzarella, spicy Italian spianata calabra sausage, jalapeño peppers, black olives.",
+                dish_4_desc: "Tomato sauce, mozzarella, Italian cotto ham, fresh mushrooms, black olives.",
+                dish_5_desc: "Mozzarella, gorgonzola cheese, taleggio cheese, parmesan, cream base (white pizza).",
+                dish_6_desc: "White truffle cream, mozzarella, wild mushrooms, fresh parsley, parmesan.",
+                contacts_tag: "Visit us",
+                contacts_title: "Contact",
+                contacts_subtitle: "We are waiting for you in Warsaw, Ursynów.",
+                contacts_address_title: "Address",
+                contacts_phone_title: "Phone",
+                contacts_phone_sub: "Call to place an order",
+                contacts_hours_title: "Opening Hours",
+                contacts_hours_val: "Monday - Sunday: 12:00 - 22:00",
+                footer_rights: "All rights reserved."
+            }
+        };
+
+        let currentLang = 'pl';
+
+        const langToggleBtn = document.getElementById('langToggle');
+        const langTextSpan = document.getElementById('langText');
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'pl' ? 'en' : 'pl';
+            langTextSpan.textContent = currentLang === 'pl' ? 'EN' : 'PL';
+            document.documentElement.lang = currentLang;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.textContent = translations[currentLang][key];
+                }
+            });
+        });
+    </script>
+
+<script id="order-widget">
+(function () {
+  var PHONE = "48224072828";
+  var L = {"add_to_order": "+ Dodaj do zamówienia", "cart": "Zamówienie", "your_order": "Twoje zamówienie", "table": "Stolik", "total": "Suma", "send_whatsapp": "Wyślij zamówienie przez WhatsApp", "order_from_site": "Nowe zamówienie ze strony internetowej"};
+  var cards = document.querySelectorAll("[data-dish][data-price]");
+  if (!cards.length) return;
+
+  var table = new URLSearchParams(location.search).get("table");
+  var cart = [];
+  var FONT = "font-family:system-ui,-apple-system,sans-serif;";
+  var BTN = FONT + "margin-top:12px;padding:8px 14px;border:0;border-radius:999px;background:#111827;" +
+            "color:#fff;font-size:14px;font-weight:600;cursor:pointer";
+  var SMALL = FONT + "width:28px;height:28px;border:1px solid #d1d5db;border-radius:8px;background:#fff;" +
+              "color:#111827;font-size:16px;cursor:pointer";
+
+  function el(tag, css, text) {
+    var node = document.createElement(tag);
+    if (css) node.style.cssText = css;
+    if (text !== undefined) node.textContent = text;
+    if (tag === "button") node.type = "button";
+    return node;
+  }
+  function fmt(n) { return String(Math.round(n * 100) / 100); }
+  function count() { return cart.reduce(function (s, it) { return s + it.qty; }, 0); }
+  function total() { return cart.reduce(function (s, it) { return s + it.qty * it.price; }, 0); }
+  function currency() { return cart.length ? cart[0].currency : ""; }
+
+  var fab = el("button", FONT + "position:fixed;right:16px;bottom:60px;z-index:2147483646;display:none;" +
+               "padding:12px 18px;border:0;border-radius:999px;background:#16a34a;color:#fff;font-size:15px;" +
+               "font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.25);cursor:pointer");
+  var panel = el("div", FONT + "position:fixed;right:16px;bottom:116px;z-index:2147483646;display:none;" +
+                 "width:min(360px,calc(100vw - 32px));max-height:60vh;overflow:auto;background:#fff;" +
+                 "color:#111827;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.3);padding:16px;" +
+                 "font-size:14px;line-height:1.4");
+  document.body.appendChild(panel);
+  document.body.appendChild(fab);
+  fab.addEventListener("click", function () {
+    panel.style.display = panel.style.display === "none" ? "block" : "none";
+  });
+
+  function render() {
+    var n = count();
+    fab.style.display = n ? "block" : "none";
+    fab.textContent = "🛒 " + L.cart + " (" + n + ")";
+    if (!n) panel.style.display = "none";
+
+    while (panel.firstChild) panel.removeChild(panel.firstChild);
+    panel.appendChild(el("div", "font-weight:700;font-size:16px;margin-bottom:8px",
+                         table ? L.your_order + " · " + L.table + " " + table : L.your_order));
+    cart.forEach(function (it) {
+      var row = el("div", "display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #eee");
+      var minus = el("button", SMALL, "−");
+      minus.addEventListener("click", function () {
+        it.qty--;
+        if (it.qty <= 0) cart.splice(cart.indexOf(it), 1);
+        render();
+      });
+      var plus = el("button", SMALL, "+");
+      plus.addEventListener("click", function () { it.qty++; render(); });
+      row.appendChild(el("div", "flex:1", it.name));
+      row.appendChild(minus);
+      row.appendChild(el("span", "min-width:20px;text-align:center", String(it.qty)));
+      row.appendChild(plus);
+      row.appendChild(el("div", "min-width:72px;text-align:right", fmt(it.qty * it.price) + " " + it.currency));
+      panel.appendChild(row);
+    });
+    panel.appendChild(el("div", "font-weight:700;margin:10px 0", L.total + ": " + fmt(total()) + " " + currency()));
+
+    var send = el("button", FONT + "width:100%;padding:12px;border:0;border-radius:12px;background:#16a34a;" +
+                  "color:#fff;font-size:15px;font-weight:600;cursor:pointer", L.send_whatsapp);
+    send.addEventListener("click", function () {
+      var lines = [L.order_from_site];
+      if (table) lines.push(L.table + ": " + table);
+      lines.push("");
+      cart.forEach(function (it) {
+        lines.push(it.qty + " × " + it.name + " — " + fmt(it.qty * it.price) + " " + it.currency);
+      });
+      lines.push("", L.total + ": " + fmt(total()) + " " + currency());
+      window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
+    });
+    panel.appendChild(send);
+  }
+
+  cards.forEach(function (card) {
+    var add = el("button", BTN, L.add_to_order);
+    add.addEventListener("click", function () {
+      var name = card.getAttribute("data-dish");
+      var item = cart.filter(function (it) { return it.name === name; })[0];
+      if (item) {
+        item.qty++;
+      } else {
+        cart.push({name: name, qty: 1, price: parseFloat(card.getAttribute("data-price")) || 0,
+                   currency: card.getAttribute("data-currency") || ""});
+      }
+      render();
+    });
+    card.appendChild(add);
+  });
+})();
+</script>
+
+</body>
+</html>
