@@ -17,8 +17,7 @@
       "description": "Ніжні вареники ручної роботи, фаршировані картоплею та лісовими грибами, подаються зі шкварками та сметаною.",
       "price": "160",
       "name_en": "Varenyky with Potatoes and Mushrooms",
-      "description_en": "Delicate handmade varenyky, stuffed with potatoes and forest mushrooms, served with cracklings and sour cream.",
-      "hidden": true
+      "description_en": "Delicate handmade varenyky, stuffed with potatoes and forest mushrooms, served with cracklings and sour cream."
     },
     {
       "id": "3",
@@ -51,7 +50,13 @@
       "price": "155",
       "name_en": "Syrnyky with Berries",
       "description_en": "Fluffy syrnyky made from homemade cottage cheese, served with fresh seasonal berries and sour cream."
+    },
+    {
+      "id": "7",
+      "name": "Окрошка",
+      "description": "",
+      "price": "100"
     }
   ],
-  "rev": 1789720960
+  "rev": 1789727135
 }
