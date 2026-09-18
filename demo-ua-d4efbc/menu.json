@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "lang": "uk",
+  "currency": "грн",
+  "items": [
+    {
+      "id": "1",
+      "name": "Борщ Український з пампушками",
+      "description": "Класичний український борщ на м'ясному бульйоні зі свіжими овочами та сметаною, подається з ароматними часниковими пампушками.",
+      "price": "185",
+      "name_en": "Ukrainian Borscht with Pampushkas",
+      "description_en": "Classic Ukrainian borscht on meat broth with fresh vegetables and sour cream, served with fragrant garlic pampushkas."
+    },
+    {
+      "id": "2",
+      "name": "Вареники з картоплею та грибами",
+      "description": "Ніжні вареники ручної роботи, фаршировані картоплею та лісовими грибами, подаються зі шкварками та сметаною.",
+      "price": "160",
+      "name_en": "Varenyky with Potatoes and Mushrooms",
+      "description_en": "Delicate handmade varenyky, stuffed with potatoes and forest mushrooms, served with cracklings and sour cream."
+    },
+    {
+      "id": "3",
+      "name": "Деруни зі сметаною",
+      "description": "Золотисті хрусткі деруни з тертої картоплі, смажені до досконалості, подаються зі свіжою сметаною.",
+      "price": "140",
+      "name_en": "Deruny with Sour Cream",
+      "description_en": "Golden crispy deruny made from grated potatoes, fried to perfection, served with fresh sour cream."
+    },
+    {
+      "id": "4",
+      "name": "Котлета по-київськи",
+      "description": "Соковита куряча котлета з вершковим маслом та зеленню всередині, обсмажена до золотистої скоринки.",
+      "price": "260",
+      "name_en": "Chicken Kyiv",
+      "description_en": "Juicy chicken cutlet with butter and herbs inside, fried to a golden crust."
+    },
+    {
+      "id": "5",
+      "name": "Сало з часником та грінками",
+      "description": "Ароматне домашнє сало тонкої нарізки, подається з часником, гірчицею та хрусткими житніми грінками.",
+      "price": "120",
+      "name_en": "Salo with Garlic and Toasts",
+      "description_en": "Fragrant homemade salo thinly sliced, served with garlic, mustard, and crispy rye toasts."
+    },
+    {
+      "id": "6",
+      "name": "Сирники з ягодами",
+      "description": "Пухкі сирники з домашнього сиру, подаються зі свіжими сезонними ягодами та сметаною.",
+      "price": "155",
+      "name_en": "Syrnyky with Berries",
+      "description_en": "Fluffy syrnyky made from homemade cottage cheese, served with fresh seasonal berries and sour cream."
+    }
+  ]
+}
