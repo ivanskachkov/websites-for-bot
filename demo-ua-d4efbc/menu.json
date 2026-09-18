@@ -25,7 +25,8 @@
       "description": "Золотисті хрусткі деруни з тертої картоплі, смажені до досконалості, подаються зі свіжою сметаною.",
       "price": "140",
       "name_en": "Deruny with Sour Cream",
-      "description_en": "Golden crispy deruny made from grated potatoes, fried to perfection, served with fresh sour cream."
+      "description_en": "Golden crispy deruny made from grated potatoes, fried to perfection, served with fresh sour cream.",
+      "hidden": true
     },
     {
       "id": "4",
@@ -55,8 +56,8 @@
       "id": "7",
       "name": "Окрошка",
       "description": "",
-      "price": "100"
+      "price": "150"
     }
   ],
-  "rev": 1789727135
+  "rev": 1789727228
 }
